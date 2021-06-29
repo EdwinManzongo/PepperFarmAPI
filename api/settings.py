@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#z$bal@)jh_)$iaio$)rf-uf$*p8-=9#5(dnr#@z82i5r)%c&e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['pepperfarm.herokuapp.com']
 
 
@@ -132,8 +132,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MODELS = os.path.join(BASE_DIR, 'predictor/models')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'predictor/')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'predictor/')
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), 'templates').replace('\\', '/'),
@@ -151,7 +156,7 @@ STATICFILES_DIRS = (
 )
 
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.CompressedManifestStaticFilesStorage'
 
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)

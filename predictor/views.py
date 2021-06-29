@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .apps import PredictorConfig
 from django.http import JsonResponse
-from rest_framework.views import APIView
+# from rest_framework.views import APIView
 
 from django.template import RequestContext
 from django.http import HttpResponseRedirect

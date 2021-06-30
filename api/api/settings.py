@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#z$bal@)jh_)$iaio$)rf-uf$*p8-=9#5(dnr#@z82i5r)%c&e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['52.152.160.178/','127.0.0.1','localhost']
 # ALLOWED_HOSTS = ['pepperfarm.herokuapp.com']
 
 

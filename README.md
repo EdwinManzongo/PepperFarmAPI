@@ -1,8 +1,5 @@
 # PepperFarmAPI
 
-<h1>PepperFarm API</h1>
-
-
 Features
 
 1. Binary image classification (Convolutional Neural Network)
